@@ -63,7 +63,8 @@ public class ItemService {
                                              Pageable pageable) {
         // Implementation using custom query methods
         if (name != null && !name.isEmpty()) {
-            return itemRepository.findByNameContainingIgnaseCaseAndActiveTrue(name, pageable)
+            //return itemRepository.findByNameContainingIgnaseCaseAndActiveTrue(name, pageable)
+        	 return itemRepository.findByNameContainingIgnoreCaseAndActiveTrue(name, pageable)
                 .map(this::mapToResponseDTO);
         }
         return itemRepository.findAll(pageable)

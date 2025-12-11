@@ -48,6 +48,7 @@ public class AuthController {
         response.setAccessToken(accessToken);
         response.setRefreshToken(refreshToken);
         response.setExpiresIn(jwtTokenProvider.getExpirationTime());
+        		
         response.setUser(user);
         
         return ResponseEntity.ok(response);

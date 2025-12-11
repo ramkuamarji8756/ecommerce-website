@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-import org.antlr.v4.runtime.misc.NotNull;
+//import org.antlr.v4.runtime.misc.NotNull;
 
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -45,20 +45,3 @@ public class ItemDTO {
     private LocalDateTime updatedAt;
 }
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-class ItemResponseDTO {
-    
-    private Long id;
-    private String name;
-    private String description;
-    private BigDecimal price;
-    private Integer stock;
-    private String imageUrl;
-    private BigDecimal tax;
-    private Boolean active;
-    private Set<CategoryDTO> categories;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
-}
